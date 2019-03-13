@@ -8,11 +8,14 @@
 #define NOT_DEFINED_WARNING " was not defined in the current platform abstraction"
 
 #ifdef MRT_PLATFORM
-  #message "MrT Platform: " + MRT_PLATFORM
+  #pragma( "MrT Platform: " + MRT_PLATFORM)
 #endif
 #ifndef MRT_PLATFORM
-  #error "No platform abstraction is defined!"
-#ifdef
+  #error "No platform abstraction is defined! Make sure one is defined in your project"
+  /*To use a platform, define the symbol for it
+   * example: add '-DMRT_PLATFORM_STM32_HAL' as a flag when compiling to target the Stm32 HAL platform
+   */
+#endif
 
 
   //Delay Abstraction
@@ -66,14 +69,19 @@
 #endif
 
 //Parallel Abstraction
-#ifndef MRT_8080_CMD
-  #define MRT_8080_CMD( ... )
-  #warning "MRT_8080_CMD" NOT_DEFINED_WARNING
+#ifndef MRT_PBUS_MODE
+  #define MRT_PBUS_MODE( ... )
+  #warning "MRT_PBUS_MODE" NOT_DEFINED_WARNING
 #endif
 
-#ifndef MRT_8080_DATA
-  #define MRT_8080_DATA( ... )
-  #warning "MRT_8080_DATA" NOT_DEFINED_WARNING
+#ifndef MRT_PBUS_WRITE
+  #define MRT_PBUS_WRITE( ... )
+  #warning "MRT_PBUS_WRITE" NOT_DEFINED_WARNING
+#endif
+
+#ifndef MRT_PBUS_READ
+  #define MRT_PBUS_READ( ... )
+  #warning "MRT_PBUS_READ" NOT_DEFINED_WARNING
 #endif
 
   //printf
