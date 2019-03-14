@@ -81,6 +81,17 @@
   #warning "MRT_SPI_TRANSFER" NOT_DEFINED_WARNING
 #endif
 
+#ifndef MRT_SPI_TRANSMIT
+  #define MRT_SPI_TRANSMIT( ... )
+  #warning "MRT_SPI_TRANSMIT" NOT_DEFINED_WARNING
+#endif
+
+#ifndef MRT_SPI_RECIEVE
+  #define MRT_SPI_RECIEVE( ... )
+  #warning "MRT_SPI_RECIEVE" NOT_DEFINED_WARNING
+#endif
+
+
   //printf
 #ifndef MRT_PRINTF
   #define MRT_PRINTF( ... )
