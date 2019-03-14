@@ -17,7 +17,6 @@
    */
 #endif
 
-
   //Delay Abstraction
 #ifndef MRT_DELAY_MS
   #define MRT_DELAY_MS( ... )
@@ -39,9 +38,20 @@
   #define MRT_GPIO_WRITE( ... )
   #warning "MRT_GPIO_WRITE" NOT_DEFINED_WARNING
 #endif
+
+#ifndef MRT_GPIO_PORT_WRITE
+  #define MRT_GPIO_PORT_WRITE( ... )
+  #warning "MRT_GPIO_PORT_WRITE" NOT_DEFINED_WARNING
+#endif
+
 #ifndef MRT_GPIO_READ
   #define MRT_GPIO_READ( ... )
   #warning "MRT_GPIO_READ" NOT_DEFINED_WARNING
+#endif
+
+#ifndef MRT_GPIO_PORT_READ
+  #define MRT_GPIO_PORT_READ( ... )
+  #warning "MRT_GPIO_PORT_READ" NOT_DEFINED_WARNING
 #endif
 
   //I2C Abstraction
