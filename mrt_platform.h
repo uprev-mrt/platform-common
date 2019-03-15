@@ -8,6 +8,7 @@
 #define MRT_PLATFORM_H
 
 #include <stdint.h>
+#include <stdbool.h>
 #include "mrt_platform_common.h"
 typedef uint32_t mrt_status_t;
 
@@ -24,6 +25,10 @@ typedef uint32_t mrt_status_t;
 #ifdef MRT_PLATFORM_ATMEL_ASF
   #define MRT_PLATFORM "ATMEL_ASF"
   #include "Platforms/Atmel/atmel_asf_abstract.h"
+#endif
+
+#ifdef MRT_PLATFORM_LINUX
+  #define MRT_PLATFORM "LINUX"
 #endif
 
 #ifdef MRT_PLATORM_CUSTOM

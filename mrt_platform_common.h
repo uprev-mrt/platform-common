@@ -16,6 +16,8 @@
 //GPIO Pin States
 #define MRT_HIGH 1
 #define MRT_LOW 0
+#define HIGH 1
+#define LOW 0
 #define MRT_DIR_OUTPUT 1
 #define MRT_DIR_INPUT 0
 
