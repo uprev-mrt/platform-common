@@ -25,6 +25,9 @@
 #define PBUS_MODE_DATA 0
 #define PBUS_MODE_CMD  1
 
+/*****			Convenient Macros			*****/
+#define MRT_EVERY(val, units) if((units) % (val) == 0 )
+
 
 
 #endif /* MRT_PLATFORM_COMMON_H_ */
