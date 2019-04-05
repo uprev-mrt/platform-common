@@ -29,5 +29,12 @@
 #define MRT_EVERY(val, units) if((units) % (val) == 0 )
 
 
+typedef enum{
+  MRT_BUS_I2C,
+  MRT_BUS_SPI,
+  MRT_BUS_UART
+}mrt_bus_type_e;
+
+
 
 #endif /* MRT_PLATFORM_COMMON_H_ */

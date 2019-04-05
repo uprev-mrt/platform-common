@@ -29,6 +29,7 @@ typedef uint32_t mrt_status_t;
 
 #ifdef MRT_PLATFORM_LINUX
   #define MRT_PLATFORM "LINUX"
+  #include "Platforms/Linux/linux_abstract.h"
 #endif
 
 #ifdef MRT_PLATORM_CUSTOM
