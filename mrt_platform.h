@@ -32,6 +32,11 @@ typedef uint32_t mrt_status_t;
   #include "Platforms/Linux/linux_abstract.h"
 #endif
 
+#ifdef MRT_PLATFORM_ESP32
+  #define MRT_PLATFORM "ESP32"
+  #include "Platforms/ESP32/esp32_abstract.h"
+#endif
+
 #ifdef MRT_PLATORM_CUSTOM
   #define MRT_PLATFORM "CUSTOM"
   #message "Platform is set to custom, be sure to provide a customized 'custom_platform.h' file"
