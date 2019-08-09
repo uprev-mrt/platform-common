@@ -45,10 +45,13 @@ typedef uint32_t mrt_status_t;
 
 #ifdef MRT_PLATFORM_NONE
   #define MRT_PLATFORM "NONE"
+  #include "none_abstract.h"
 #endif
 
 
 //platform_check must be included AFTER the abstraction header
+#ifndef MRT_PLATFORM_NONE
 #include "platform_check.h"
+#endif
 
 #endif
