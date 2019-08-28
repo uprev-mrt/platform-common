@@ -11,7 +11,7 @@
 #define NOT_DEFINED_WARNING " was not defined in the current platform abstraction"
 
 #ifdef MRT_PLATFORM
-  #pragma message( "MrT Platform: "  MRT_PLATFORM)
+  #pragma message( "MrT Platform: "  MRT_PLATFORM_STRING)
 #endif
 #ifndef MRT_PLATFORM
   #error "No platform abstraction is defined! Make sure one is defined in your project"
@@ -104,6 +104,6 @@
   #define MRT_MUTEX_LOCK(m) (m) = 1
   #define MRT_MUTEX_UNLOCK(m) (m) = 0
   #define MRT_MUTEX_DELETE(m) (m) =0
-#endif 
+#endif
 
 #endif

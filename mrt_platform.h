@@ -12,39 +12,48 @@
 #include "mrt_platform_common.h"
 typedef uint32_t mrt_status_t;
 
-#ifdef MRT_PLATFORM_STM32_HAL
-  #define MRT_PLATFORM "STM32"
+#define MRT_STM32_HAL               0
+#define MRT_ATMEL_START             1
+#define MRT_ATMEL_ASF               2
+#define MRT_LINUX                   3
+#define MRT_ESP32                   4
+#define MRT_PLATFORM_CUSTOM         5
+#define MRT_PLATFORM_NONE           6
+
+
+#if MRT_PLATFORM == MRT_STM32_HAL
   #include "Platforms/STM32/stm32_hal_abstract.h"
+  #define MRT_PLATFORM_STRING "STM32_HAL"
 #endif
 
-#ifdef MRT_PLATFORM_ATMEL_START
-  #define MRT_PLATFORM "ATMEL_START"
+#if MRT_PLATFORM == MRT_ATMEL_START
   #include "Platforms/Atmel/atmel_start_abstract.h"
+  #define MRT_PLATFORM_STRING "Atmel_Start"
 #endif
 
-#ifdef MRT_PLATFORM_ATMEL_ASF
-  #define MRT_PLATFORM "ATMEL_ASF"
+#if MRT_PLATFORM == MRT_ATMEL_ASF
   #include "Platforms/Atmel/atmel_asf_abstract.h"
+  #define MRT_PLATFORM_STRING "Atmel_ASF"
 #endif
 
-#ifdef MRT_PLATFORM_LINUX
-  #define MRT_PLATFORM "LINUX"
+#if MRT_PLATFORM == MRT_LINUX
   #include "Platforms/Linux/linux_abstract.h"
+  #define MRT_PLATFORM_STRING "Linux"
 #endif
 
-#ifdef MRT_PLATFORM_ESP32
-  #define MRT_PLATFORM "ESP32"
+#if MRT_PLATFORM == MRT_ESP32
   #include "Platforms/ESP32/esp32_abstract.h"
+  #define MRT_PLATFORM_STRING "ESP32"
 #endif
 
-#ifdef MRT_PLATORM_CUSTOM
-  #define MRT_PLATFORM "CUSTOM"
+#if MRT_PLATFORM == MRT_PLATFORM_CUSTOM
+  #define MRT_PLATFORM_STRING "Custom"
   #message "Platform is set to custom, be sure to provide a customized 'custom_platform.h' file"
   #include "custom_platform.h"
 #endif
 
-#ifdef MRT_PLATFORM_NONE
-  #define MRT_PLATFORM "NONE"
+#if MRT_PLATFORM == MRT_PLATFORM_NONE
+  #define MRT_PLATFORM_STRING "NONE"
   #include "none_abstract.h"
 #endif
 
