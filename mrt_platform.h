@@ -12,13 +12,14 @@
 #include "mrt_platform_common.h"
 typedef uint32_t mrt_status_t;
 
-#define MRT_STM32_HAL               0
-#define MRT_ATMEL_START             1
-#define MRT_ATMEL_ASF               2
-#define MRT_LINUX                   3
-#define MRT_ESP32                   4
-#define MRT_PLATFORM_CUSTOM         5
-#define MRT_PLATFORM_NONE           6
+#define MRT_PLATFORM_NONE           0
+#define MRT_STM32_HAL               1
+#define MRT_ATMEL_START             2
+#define MRT_ATMEL_ASF               3
+#define MRT_LINUX                   4
+#define MRT_ESP32                   5
+#define MRT_PLATFORM_CUSTOM         6
+
 
 
 #if MRT_PLATFORM == MRT_STM32_HAL
