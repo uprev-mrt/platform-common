@@ -28,12 +28,19 @@
 /*****			Convenient Macros			*****/
 #define MRT_EVERY(val, units) if((units) % (val) == 0 )
 
+#define MRT_SWAP16(x) ((((x) & 0xff) << 8) | (((x) & 0xff00) >> 8))
+#define MRT_SWAP32(x) (((x) & 0xff) << 24 | ((x) & 0xff00) << 8 | ((x) & 0xff0000) >> 8 | ((x) >> 24) & 0xff)
 
 typedef enum{
   MRT_BUS_I2C,
   MRT_BUS_SPI,
   MRT_BUS_UART
 }mrt_bus_type_e;
+
+typedef enum{
+  MRT_ENDIANESS_BIG,
+  MRT_ENDIANESS_LITTLE
+} mrt_endianess_e;
 
 
 
