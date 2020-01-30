@@ -9,7 +9,13 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 #include "mrt_platform_common.h"
+
 typedef uint32_t mrt_status_t;
 
 #define MRT_PLATFORM_NONE           0
@@ -25,6 +31,7 @@ typedef uint32_t mrt_status_t;
 #if MRT_PLATFORM == MRT_STM32_HAL
   #include "Platforms/STM32/stm32_hal_abstract.h"
   #define MRT_PLATFORM_STRING "STM32_HAL"
+	#include "platform_check.h"
 #endif
 
 #if MRT_PLATFORM == MRT_ATMEL_START
@@ -63,5 +70,7 @@ typedef uint32_t mrt_status_t;
 #ifndef MRT_PLATFORM_NONE
 #include "platform_check.h"
 #endif
-
+#ifdef __cplusplus
+}
+#endif
 #endif

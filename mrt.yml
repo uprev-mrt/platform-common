@@ -1,0 +1,5 @@
+---
+name: Platform
+description: Common platform abstraction layer
+category: Platform
+requires: []
