@@ -27,7 +27,10 @@
 
 /*****			Convenient Macros			*****/
 #define MRT_EVERY(val, units) if((units) % (val) == 0 )
+#define MRT_ON_FIRST static uint8_t __first =0; if(!__first++)
 
+#define MRT_ABS(N) ((N<0)?(-N):(N))
+#define MRT_BIT(x, n) (((x) >> n) & 1 )
 #define MRT_SWAP16(x) ((((x) & 0xff) << 8) | (((x) & 0xff00) >> 8))
 #define MRT_SWAP32(x) (((x) & 0xff) << 24 | ((x) & 0xff00) << 8 | ((x) & 0xff0000) >> 8 | ((x) >> 24) & 0xff)
 
