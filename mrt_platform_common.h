@@ -31,6 +31,7 @@
 
 #define MRT_ABS(N) ((N<0)?(-N):(N))
 #define MRT_BIT(x, n) (((x) >> n) & 1 )
+#define MRT_CHECK_FLAG(x,f) ((x) & (f) == (f))
 #define MRT_SWAP16(x) ((((x) & 0xff) << 8) | (((x) & 0xff00) >> 8))
 #define MRT_SWAP32(x) (((x) & 0xff) << 24 | ((x) & 0xff00) << 8 | ((x) & 0xff0000) >> 8 | ((x) >> 24) & 0xff)
 
