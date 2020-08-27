@@ -16,6 +16,10 @@ extern "C"
 #endif
 #include "mrt_platform_common.h"
 
+#ifdef MRT_FREERTOS
+#include "mrt_FreeRTOS.h"
+#endif
+
 typedef uint32_t mrt_status_t;
 
 #define MRT_PLATFORM_NONE           0
