@@ -1,4 +1,4 @@
-# Platforms/Common  
+# Common  
 
 This module defines definitions and functions common to all platforms. It must be included with any project that uses on the of the Platform abstractions.
 
