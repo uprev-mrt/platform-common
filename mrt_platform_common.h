@@ -12,6 +12,7 @@
 
 #define MRT_STATUS_OK 0
 #define MRT_STATUS_ERROR 1
+#define MRT_STATUS_NOT_IMPLEMENTED 2
 
 //GPIO Pin States
 #define MRT_HIGH 1
