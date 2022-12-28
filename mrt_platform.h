@@ -28,7 +28,8 @@ typedef uint32_t mrt_status_t;
 #define MRT_ATMEL_ASF               3
 #define MRT_LINUX                   4
 #define MRT_ESP32                   5
-#define MRT_PLATFORM_CUSTOM         6
+#define MRT_NRF5                    6
+#define MRT_PLATFORM_CUSTOM         99
 
 
 
@@ -55,6 +56,11 @@ typedef uint32_t mrt_status_t;
 
 #if MRT_PLATFORM == MRT_ESP32
   #include "Platforms/ESP32/esp32_abstract.h"
+  #define MRT_PLATFORM_STRING "ESP32"
+#endif
+
+#if MRT_PLATFORM == MRT_NRF5
+  #include "Platforms/NRF5/nrf5_abstract.h"
   #define MRT_PLATFORM_STRING "ESP32"
 #endif
 
